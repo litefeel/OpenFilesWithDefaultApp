@@ -5,10 +5,10 @@ using UnityEditor;
 using UnityEditor.Callbacks;
 using UnityEngine;
 
-namespace litefeel.OpenFileWithDefaultApp
+namespace litefeel.OpenFilesWithDefaultApp
 {
 
-    public class OpenFileWithDefaultApp
+    public static class OpenFilesWithDefaultApp
     {
 
         [OnOpenAsset(0)]

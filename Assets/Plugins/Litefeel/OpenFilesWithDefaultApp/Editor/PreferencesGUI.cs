@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityScript.Lang;
 
-namespace litefeel.OpenFileWithDefaultApp
+namespace litefeel.OpenFilesWithDefaultApp
 {
 
     public static class PreferencesGUI
