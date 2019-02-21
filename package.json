@@ -1,0 +1,11 @@
+{
+    "name": "com.litefeel.openfileswithdefaultapp",
+    "displayName": "OpenFilesWithDefaultApp",
+    "version": "1.0.0",
+    "unity": "2018.2",
+    "description": "Open Files With Default App is just perfect Unity asset plugin to open file with system default Application.",
+    "keywords": ["Editor", "Open", "File", "Default", "Application"],
+    "category": "Tools",
+    "dependencies": {
+    }
+}
