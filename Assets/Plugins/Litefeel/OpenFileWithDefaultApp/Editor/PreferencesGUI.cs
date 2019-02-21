@@ -59,14 +59,16 @@ namespace litefeel.OpenFileWithDefaultApp
                 }
             }
         }
-        
 
-        // Add preferences section named "My Preferences" to the Preferences window
-        [PreferenceItem("Open File With Default App")]
+#if UNITY_2018_3_OR_NEWER
+        [PreferenceItem("Open Files With Default App")]
+#else
+        [PreferenceItem("Open Files")]
+#endif
         public static void OnGUI()
         {
-            EditorGUILayout.LabelField("Specify the files will open with default application. like (shader txt)");
-            EditorGUILayout.LabelField("Separate the patterns with a space.");
+            EditorGUILayout.LabelField("Specify the files will open with default application.");
+            EditorGUILayout.LabelField("Separate the patterns with a space. e.g.(shader txt)");
             FileExtsStr = EditorGUILayout.TextField("File Extensions", FileExtsStr);
         }
     }
