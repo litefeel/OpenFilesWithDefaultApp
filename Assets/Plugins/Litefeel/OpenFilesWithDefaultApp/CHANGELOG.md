@@ -1,3 +1,5 @@
+v1.2.0    Apr 10 2019
+[NEW]     Support for opening package files
 
 v1.1.0    Mar 1 2019
 [NEW]     Add assembly definition files
