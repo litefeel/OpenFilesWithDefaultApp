@@ -41,6 +41,7 @@ namespace litefeel.OpenFilesWithDefaultApp
 
         private static void OpenByPackages(string assetPath)
         {
+#if UNITY_2018_1_OR_NEWER
             var request = Client.List(true);
             EditorApplication.CallbackFunction update = null;
 
@@ -61,6 +62,7 @@ namespace litefeel.OpenFilesWithDefaultApp
                 }
             };
             EditorApplication.update += update;
+#endif
         }
 
         private static string GetPathWithoutPackage(string packagePath)
