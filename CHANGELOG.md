@@ -1,3 +1,10 @@
+v1.3.1    May 1 2019
+[CHANGE]  Update README
+
+v1.3.0    May 1 2019
+[CHANGE]  Simplified logic
+[CHANGE]  Compatible with unity 2017
+
 v1.2.0    Apr 10 2019
 [NEW]     Support for opening package files
 

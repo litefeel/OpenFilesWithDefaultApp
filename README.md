@@ -28,14 +28,10 @@ Find the manifest.json file in the Packages folder of your project and edit it t
 }
 ```
 
-#### Using .unitypackage file (for Unity 5.0+)
+#### Using .zip file (for Unity 5.0+)
 
-Download `*.unitypackage` from [Releases](https://github.com/litefeel/OpenFilesWithDefaultApp/releases) and import the package into your Unity project.  
-Select `Assets > Import Package > Custom Package` from the menu
-
-
-#### Using Unity Asset Store (for Unity 2017.4.1+)
-Instal package from <https://assetstore.unity.com/packages/tools/utilities/open-files-with-default-app-140433>
+1. Download `Source code` from [Releases](https://github.com/litefeel/OpenFilesWithDefaultApp/releases)
+2. Extract the package into your Unity project
 
 
 ## How to use?
