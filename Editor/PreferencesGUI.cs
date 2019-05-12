@@ -12,7 +12,7 @@ namespace litefeel.OpenFilesWithDefaultApp
 
         private const string KEY = "OpenFileWithDefaultApp_Exts";
 
-        
+
         private static bool s_ArrCached = false;
         private static string[] s_FileExt;
         public static string[] FileExts
@@ -30,7 +30,7 @@ namespace litefeel.OpenFilesWithDefaultApp
                     else
                     {
                         s_FileExt = str.Split(new char[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
-                        for(var i = 0; i < s_FileExt.Length; ++i)
+                        for (var i = 0; i < s_FileExt.Length; ++i)
                         {
                             s_FileExt[i] = "." + s_FileExt[i];
                         }
@@ -45,13 +45,13 @@ namespace litefeel.OpenFilesWithDefaultApp
         {
             get
             {
-                if(s_FileExtsStr == null)
+                if (s_FileExtsStr == null)
                     s_FileExtsStr = EditorPrefs.GetString(KEY, "");
                 return s_FileExtsStr;
             }
             set
             {
-                if(s_FileExtsStr != value && value != null)
+                if (s_FileExtsStr != value && value != null)
                 {
                     s_FileExtsStr = value;
                     EditorPrefs.SetString(KEY, s_FileExtsStr);
