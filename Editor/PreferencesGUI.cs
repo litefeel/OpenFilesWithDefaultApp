@@ -61,7 +61,24 @@ namespace litefeel.OpenFilesWithDefaultApp
         }
 
 #if UNITY_2018_3_OR_NEWER
-        [PreferenceItem("Open Files With Default App")]
+        //[PreferenceItem("Open Files With Default App")]
+        private class MyPrefSettingsProvider : SettingsProvider
+        {
+            public MyPrefSettingsProvider(string path, SettingsScope scopes = SettingsScope.User)
+            : base(path, scopes)
+            { }
+
+            public override void OnGUI(string searchContext)
+            {
+                PreferencesGUI.OnGUI();
+            }
+        }
+
+        [SettingsProvider]
+        static SettingsProvider NewPreferenceItem()
+        {
+            return new MyPrefSettingsProvider("Preferences/Open Files With Default App");
+        }
 #else
         [PreferenceItem("Open Files")]
 #endif
