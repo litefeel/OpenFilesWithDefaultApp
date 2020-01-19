@@ -19,7 +19,7 @@ Open Files With Default App is just perfect Unity asset plugin to open file with
 #### Using UnityPackageManager (for Unity 2018.3+)
 
 Find the manifest.json file in the Packages folder of your project and edit it to look like this:
-``` json
+``` js
 {
   "dependencies": {
     "com.litefeel.openfileswithdefaultapp": "https://github.com/litefeel/OpenFilesWithDefaultApp.git#upm",
@@ -31,7 +31,7 @@ Find the manifest.json file in the Packages folder of your project and edit it t
 #### Using .zip file (for Unity 5.0+)
 
 1. Download `Source code` from [Releases](https://github.com/litefeel/OpenFilesWithDefaultApp/releases)
-2. Extract the package into your Unity project
+2. Extract the package into  `$UnityProject/Packages` or `$UnityProject/Assets/Plugins`
 
 
 ## How to use?
