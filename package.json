@@ -17,5 +17,15 @@
     "url": "https://www.litefeel.com"
   },
   "category": "Tools",
-  "dependencies": {}
+  "type": "tool",
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/litefeel/OpenFileWithDefaultApp.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/litefeel/OpenFileWithDefaultApp/issues"
+  },
+  "homepage": "https://github.com/litefeel/OpenFileWithDefaultApp#readme"
 }
