@@ -1,3 +1,6 @@
+#### v1.4.1    Sep 5 2020
+- [Fix]     Fixed compile error on unity 2020
+
 #### v1.4.0    May 12 2019
 - [CHANGE]  Use SettingsProvider instand of preferenceItem
 
