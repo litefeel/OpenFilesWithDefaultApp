@@ -59,8 +59,6 @@ namespace litefeel.OpenFilesWithDefaultApp
             }
         }
 
-#if UNITY_2018_3_OR_NEWER
-        //[PreferenceItem("Open Files With Default App")]
         private class MyPrefSettingsProvider : SettingsProvider
         {
             public MyPrefSettingsProvider(string path, SettingsScope scopes = SettingsScope.User)
@@ -69,7 +67,9 @@ namespace litefeel.OpenFilesWithDefaultApp
 
             public override void OnGUI(string searchContext)
             {
-                PreferencesGUI.OnGUI();
+                EditorGUILayout.LabelField("Specify the files will open with default application.");
+                EditorGUILayout.LabelField("Separate the patterns with a space. e.g.(shader txt)");
+                FileExtsStr = EditorGUILayout.TextField("File Extensions", FileExtsStr);
             }
         }
 
@@ -78,14 +78,6 @@ namespace litefeel.OpenFilesWithDefaultApp
         {
             return new MyPrefSettingsProvider("Preferences/Open Files With Default App");
         }
-#else
-        [PreferenceItem("Open Files")]
-#endif
-        public static void OnGUI()
-        {
-            EditorGUILayout.LabelField("Specify the files will open with default application.");
-            EditorGUILayout.LabelField("Separate the patterns with a space. e.g.(shader txt)");
-            FileExtsStr = EditorGUILayout.TextField("File Extensions", FileExtsStr);
-        }
+
     }
 }

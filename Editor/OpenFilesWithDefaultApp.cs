@@ -12,8 +12,6 @@ namespace litefeel.OpenFilesWithDefaultApp
 
     public static class OpenFilesWithDefaultApp
     {
-        private const string PACKAGES = "Packages/";
-        private const string ASSETS = "Assets/";
 
         [OnOpenAsset(0)]
         public static bool OnOpenAsset(int instanceID, int line)

@@ -15,19 +15,23 @@ jobs:
       fail-fast: false
       matrix:
         unityVersion:
-          - 2018.4.17f1
-          - 2019.4.9f1
-          - 2020.1.3f1
+          - 2019.4.20f1
+          - 2020.3.0f1
+          - 2021.1.0f1
     steps:
-      # Set env
-      - name: Set env UNITY_LICENSE_FILE
-        run: echo ::set-env name=UNITY_LICENSE_FILE::UnityLicense/${{ matrix.unityVersion }}.ulf
-
       # Checkout Empty Project
       - name: Checkout Empty Project
         uses: actions/checkout@v2
         with:
           repository: litefeel/UnityEmptyProject
+
+      # Set env
+      - name: Set env UNITY_LICENSE_FILE
+        run: |
+            echo 'UNITY_LICENSE<<EOF' >> $GITHUB_ENV
+            cat UnityLicense/${{ matrix.unityVersion }}.ulf >> $GITHUB_ENV
+            echo '' >> $GITHUB_ENV
+            echo 'EOF' >> $GITHUB_ENV
 
       # Checkout this project
       - name: Checkout repository
@@ -37,14 +41,14 @@ jobs:
           path: Packages/MyPlugin
 
       # Cache
-      - uses: actions/cache@v1.1.0
+      - uses: actions/cache@v2
         with:
           path: Library
           key: Library
 
       # Test
       - name: Run tests
-        uses: webbertakken/unity-test-runner@v1.6
+        uses: game-ci/unity-test-runner@v2
         id: tests
         with:
           customParameters: "-nographics"
@@ -58,13 +62,13 @@ jobs:
       #     targetPlatform: WebGL
 
       # Output
-      - uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v2
         name: Upload tests
         with:
           name: Test results for ${{ matrix.testMode }} on unity ${{ matrix.unityVersion }}
           path: ${{ steps.tests.outputs.artifactsPath }}
 
-      # - uses: actions/upload-artifact@v1
+      # - uses: actions/upload-artifact@v2
       #   name: Upload build
       #   with:
       #     name: Build

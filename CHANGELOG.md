@@ -1,21 +1,24 @@
-#### v1.4.1    Sep 5 2020
+#### 1.5.0    2022-11-27
+- [CHANGE]  Minimum compatibility to unity2019
+
+#### 1.4.1    2020-09-05
 - [Fix]     Fixed compile error on unity 2020
 
-#### v1.4.0    May 12 2019
+#### 1.4.0    2019-05-12
 - [CHANGE]  Use SettingsProvider instand of preferenceItem
 
-#### v1.3.1    May 1 2019
+#### 1.3.1    2019-05-01
 - [CHANGE]  Update README
 
-#### v1.3.0    May 1 2019
+#### 1.3.0    2019-05-01
 - [CHANGE]  Simplified logic
 - [CHANGE]  Compatible with unity 2017
 
-#### v1.2.0    Apr 10 2019
+#### 1.2.0    2019-04-10
 - [NEW]     Support for opening package files
 
-#### v1.1.0    Mar 1 2019
+#### 1.1.0    2019-03-01
 - [NEW]     Add assembly definition files
 
-#### v1.0.0    Feb 22 2019
+#### 1.0.0    2019-02-22
 - [NEW]     The first public version
