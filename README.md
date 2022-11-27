@@ -16,25 +16,13 @@ Open Files With Default App is just perfect Unity asset plugin to open file with
 
 ## Install
 
-#### Using npm (Ease upgrade in Package Manager UI)**Recommend**
+#### Using OpenUPM
 
-Find the manifest.json file in the Packages folder of your project and edit it to look like this:
-``` js
-{
-  "scopedRegistries": [
-    {
-      "name": "My Registry",
-      "url": "https://registry.npmjs.org",
-      "scopes": [
-        "com.litefeel"
-      ]
-    }
-  ],
-  "dependencies": {
-    "com.litefeel.openfileswithdefaultapp": "1.5.0",
-    ...
-  }
-}
+This package is available on [OpenUPM](https://openupm.com).  
+You can install it via [openupm-cli](https://github.com/openupm/openupm-cli).
+
+```
+openupm add com.litefeel.openfileswithdefaultapp
 ```
 
 #### Using git
