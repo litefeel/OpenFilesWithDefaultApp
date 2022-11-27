@@ -31,7 +31,7 @@ Find the manifest.json file in the Packages folder of your project and edit it t
 ``` js
 {
   "dependencies": {
-    "com.litefeel.openfileswithdefaultapp": "https://github.com/litefeel/OpenFilesWithDefaultApp.git#1.5.0",
+    "com.litefeel.openfileswithdefaultapp": "https://github.com/litefeel/OpenFilesWithDefaultApp.git#1.5.1",
     ...
   }
 }
