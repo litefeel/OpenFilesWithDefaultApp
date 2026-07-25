@@ -6,6 +6,7 @@ on:
       - upm
     paths:
       - package.json
+      - .github/workflows/release.yml
   workflow_dispatch:
 
 permissions:
