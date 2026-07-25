@@ -1,3 +1,7 @@
+#### 1.5.2    2026-07-25
+- [Fix]     Support Unity 6000.5 EntityId in OnOpenAsset callbacks
+- [CHANGE]  Minimum compatibility to Unity 2019.4
+
 #### 1.5.1    2022-11-27
 - [CHANGE]  Minimum compatibility to unity2019
 
