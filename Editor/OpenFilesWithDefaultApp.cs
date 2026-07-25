@@ -13,14 +13,19 @@ namespace litefeel.OpenFilesWithDefaultApp
     public static class OpenFilesWithDefaultApp
     {
 
+#if UNITY_6000_5_OR_NEWER
         [OnOpenAsset(0)]
-        public static bool OnOpenAsset(int instanceID, int line)
+        public static bool OnOpenAsset(EntityId assetId, int line)
+#else
+        [OnOpenAsset(0)]
+        public static bool OnOpenAsset(int assetId, int line)
+#endif
         {
             var exts = PreferencesGUI.FileExts;
             if (exts.Length == 0) return false;
 
             // Packages/com.unity.render-pipelines.lightweight/Shaders/Unlit.shader
-            string assetPath = AssetDatabase.GetAssetPath(instanceID);
+            string assetPath = AssetDatabase.GetAssetPath(assetId);
 
             foreach (var ext in exts)
             {
